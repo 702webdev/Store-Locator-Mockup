@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:weightSum="12"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_weight="2"
+                  android:layout_height="0dp"
+                  android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:weightSum="2">
+        <EditText android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:hint="Enter Zipcode"
+                  android:inputType="number"
+                  android:maxLength="5"
+                  android:id="@+id/zipcode"/>
+        <EditText android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:inputType="number"
+                  android:hint="Enter Distance"
+                  android:id="@+id/distance"/>
+    </LinearLayout>
+    <Button android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:text="Fetch"
+            android:gravity="center"
+            android:id="@+id/fetchbtn"/>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:id="@+id/scrollview"
+                android:background="#ffffffff"
+                android:scrollbars="horizontal|vertical"
+            >
+        <HorizontalScrollView android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+            <TableLayout android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:id="@+id/table"/>
+        </HorizontalScrollView>
+    </ScrollView>
+    <LinearLayout android:layout_height="0dp"
+                  android:layout_width="0dp"/>
+</LinearLayout>
